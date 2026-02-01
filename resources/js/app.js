@@ -1,9 +1,8 @@
 import "./bootstrap";
 import { createApp } from "vue";
-import { createPinia } from "pinia";
+import "../css/app.css";
+import Welcome from "./Pages/Welcome.vue";
 
 const app = createApp({});
-const pinia = createPinia();
-
-app.use(pinia);
+app.component("welcome-component", Welcome);
 app.mount("#app");
