@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 
@@ -19,3 +20,5 @@ Route::delete('users/{user}', function (User $user) {
 	$user->delete();
 	return redirect()->route('users.index');
 })->name('users.destroy');
+
+Route::get('/posts', [PostController::class, 'index'])->name('posts.index');

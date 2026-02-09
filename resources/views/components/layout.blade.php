@@ -26,6 +26,14 @@
 		])>
 			Users
 		</a>
+
+		<a href="{{ route('posts.index') }}" @class([
+			'text-xl py-2 px-3 rounded-lg transition',
+			'bg-gray-200 font-semibold' => request()->routeIs('posts.*'),
+			'hover:bg-gray-200' => !request()->routeIs('posts.*'),
+		])>
+			User Posts
+		</a>
 	</nav>
 
 	<main class="max-w-7xl mx-auto mt-10 px-5">
